@@ -24,7 +24,6 @@ private WebDriver driver;
         driver.get("https://www.soc.com.br/blog-de-sst/#");
         //getdriver().get("https://www.soc.com.br/blog-de-sst/");
     }
-
     @Quando("insiro uma palavra para pesquisar")
     public void insiroUmaPalavraParaPesquisar() {
         //driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
@@ -36,15 +35,11 @@ private WebDriver driver;
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
 
-
         driver.findElement(By.xpath("//input[@placeholder='Procurar']")).sendKeys("teste");
-
-
         driver.findElement(By.xpath("//input[@placeholder='Procurar']")).submit();
 
     }
-
-     @Entao("eu espero que as informações referentes a busca que eu solicitei sejam apresentadas")
+    @Entao("eu espero que as informações referentes a busca que eu solicitei sejam apresentadas")
     public void euEsperoQueAsInformaçõesReferentesABuscaQueEuSoliciteiSejamApresentadas() {
        // driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
         driver.findElement(By.xpath("//*[text()=' Analista de Testes – QA ']")).getText();
@@ -52,7 +47,6 @@ private WebDriver driver;
     }
     @Dado("acesse a rede socnet na aba funcionalidade")
     public void acesse_a_rede_socnet_na_aba_funcionalidade() {
-
         //driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -65,11 +59,6 @@ private WebDriver driver;
         WebElement element2 = driver.findElement(By.xpath("(//a[text()='Rede SOCNET'])[1]"));
         JavascriptExecutor abridRedeSocNet = (JavascriptExecutor)driver;
         abridRedeSocNet.executeScript("arguments[0].click();", element2);
-
-
-
-
-
     }
     @Dado("clico em credenciados")
     public void clico_em_credenciados() {
@@ -79,10 +68,6 @@ private WebDriver driver;
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element3);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-
-
-
     }
     @Quando("preencho os filtros para buscar um credenciado")
     public void preencho_os_filtros_para_buscar_um_credenciado() {
