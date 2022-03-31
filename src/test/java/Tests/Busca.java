@@ -46,7 +46,7 @@ private WebDriver driver;
 
      @Entao("eu espero que as informações referentes a busca que eu solicitei sejam apresentadas")
     public void euEsperoQueAsInformaçõesReferentesABuscaQueEuSoliciteiSejamApresentadas() {
-        driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
+       // driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
         driver.findElement(By.xpath("//*[text()=' Analista de Testes – QA ']")).getText();
         driver.quit();
     }
@@ -73,7 +73,7 @@ private WebDriver driver;
     }
     @Dado("clico em credenciados")
     public void clico_em_credenciados() {
-        driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
+        //driver.findElement(By.xpath("//div[@data-elementor-type='popup']//../a[@class='elementor-icon']")).click();
 
         WebElement element3 = driver.findElement(By.xpath("//span[text()='Buscar credenciados']"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
